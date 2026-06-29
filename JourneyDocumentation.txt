@@ -152,7 +152,22 @@ _ Initialized a <div> for the developers within the main loader and gave id="loa
 - vanish() function was declared in function.js to append the disappear class in style.css to loader which is in index.html. As a result, both index.html and style.css can now see disappear as a class and preform the following tasks.
 
 Day 14 - Thursday, 25 June
-- [Jonathan Notes!]
+- Revised the issue regarding the quote presentation system (For Loop), continuing to troubleshoot previous code and fixed application loading screen.
+- Determined that the existing For Loop approach would not be suitable for the necessary functionality and decided that the logic must be altered from the ground up.
+- Discussed and developed a new plan to implement the quotes through the use of an if statement, based on a solution envisioned on previous non coding days.
+- Integrated the if statement within the updateQuotes function and had planned to make the quotes alternate based on the click of the Submit button.
+- While testing the code the quotes unexpectedly alternated on their own, through future investigation it was determined that the existing setInterval linked with the updateQuotes function and was responsible for triggering the quote change.
+- Gain a better understanding of how the setInterval method worked, it does not pause the the execution of the For Loop between each loop, rather let the execution finish full then repeat about the time pause.
+- In contrast, the behaviour of the If statement only went once within the function, then it setInterval successfully presented a delay between each succession, providing the desirable results.
+- Shifted focus to integrate the loading screen effectively, trying to fix the animation from blending and getting sent behind the home page (screen with all data) before disappearing.
+- After many attempts of trying to debug the loading screen, it was determined that the  animation-fill-mode property was the root cause of visual conflict.
+- Identified that elements on the home screen were set to animation-fill-mode: Forward, being presented above the loading screen when appearing, causing the visual problem.
+- Corrected this animation behaviour by making all elements on the home screen have animation-fill-mode: Backwards, while the loading screen have animation-fill-mode: Forward, also fix animations that did not align with the rest.
+- Made some final corrections to the loading screen by integrated the iPOTS logo appropriately to the loading screen and fixing animation to improve consistency throughout application.
+- Began to investigate ways to lock the screen in portrait mode in javascript, to prevent layout problems when screen is rotated to landscape.
+- Researched how to screen lock on javascript, but later discovered that the extension used to mimic a device screen for the application was unable to rotate, not allowing for a physical demonstration of how the code would unfold.
+- Explored multiple extension in hopes to find one that actually turns the screen as needed, but none provided the functionality that was appropriate for proper testing.
+- Concluded that further progress on screen orientation lock the application would require  launching an application on GitHub for testing on a physical mobile device during a future coding session. An alternative approach for application formatting may need to be explored, such as improving formatting centralization.
 
 Day 15 - Saturday, 27 June
 - Initialized a GitHub repository for iPOTS Swimming Reminder App and attached all of the files in the following folder.
